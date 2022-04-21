@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Paradise Paw</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
@@ -15,33 +15,85 @@
     <header>
         <nav>
             <ul>
-              <li><strong>Paradise Paw</strong></li>
+                <li><strong>Paradise Paw</strong></li>
             </ul>
             <ul>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#" role="button">Button</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact us!</a></li>
+                <li><a href="#" role="button">Button</a></li>
             </ul>
         </nav>
     </header>
-    <div>
-        <button>Book Now!</button>
-        
+    <button id="booking-btn">Book Now!</button>
+
+    <!-- Slideshow container -->
+    <div class="dogSlides">
+
+        <!-- Dog images for slideshow -->
+        <div class="dogSlide">
+            <div class="numbertext">1 / 5</div>
+            <img src="./assets/images/husky.jpg" style="width:100%">
+            <div class="text">husky</div>
+        </div>
+
+        <div class="dogSlide">
+            <div class="numbertext">2 / 5</div>
+            <img src="./assets/images/cute-under-bite.jpg" style="width:100%">
+            <div class="text">cute under bite</div>
+        </div>
+
+        <div class="dogSlide">
+            <div class="numbertext">3 / 5</div>
+            <img src="./assets/images/pomeranian.jpg" style="width:100%">
+            <div class="text">pomeranian</div>
+        </div>
+        <div class="dogSlide">
+            <div class="numbertext">4 / 5</div>
+            <img src="./assets/images/poodle.jpg" style="width:100%">
+            <div class="text">poodle</div>
+        </div>
+        <div class="dogSlide">
+            <div class="numbertext">5 / 5</div>
+            <img src="./assets/images/schnauzer.jpg" style="width:100%">
+            <div class="text">schnauzer</div>
+        </div>
     </div>
-    <div>
-        <div></div>
+    <!-- slideshow end -->
+    <!-- services start -->
+    <div id="services">
+        <h2>Our Services</h2>
+        <div>
+            <h3>Bathing</h3>
+            <img src="./assets/images/bath.jpg" alt="">
+            
+        </div>
+        <div>
+            <img src="./assets/images/before.jpg" alt="">
+        </div>
+        <div>
+            <h3>blow drying</h3>
+            <img src="./assets/images/blow-dry.jpg" alt="">
+        </div>
+        <div>
+            <h3>Grooming</h3>
+            <img src="./assets/images/grommed.jpg" alt="">
+        </div>
     </div>
-    <main class="dog-pictures"></main>
-
-    
-
-    
-    
-
-
-
-
-
+    <!-- services end -->
+    <!-- reviews start -->
+    <div id="reviews">
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+    <script>src = "./assets/js/script.js"</script>
+<footer>
+    <div id="contact" class="contact-info">
+        <a href="tel:8015898924">Call us at (801)589-8924</a><br>
+        <a href="https://www.facebook.com/Paradise-Paw-2025968040809183/" target="blank">or visit our facebook page!</a>
+    </div>
+</footer>
 </body>
 
 
