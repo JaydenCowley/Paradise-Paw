@@ -1,6 +1,33 @@
+.hero img{
+    width: 400px;
+}
 #booking-btn {
     position:sticky;
     top: 10px;
     width: 300px;
     margin-left: 15px;
+}
+.dogslides-container{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.dogslide img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+/* hide images by default */
+.dogslide {
+    display: none;
+}
+/* fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 3.5s;
+}
+@keyframes fade {
+    from {opacity: .4;}
+    to {opacity: 1;}
+    
 }
