@@ -5,11 +5,18 @@
   --primary-focus: rgba(255, 179, 0, 0.125);
   --primary-inverse: rgba(0, 0, 0, 0.75);
 }
+#services {
+    margin: 0 auto;
+}
+#services h3 {
+    margin: 5px 0;
+}
 #services img {
     height: 400px;
     width: 300px;
     border-radius: 30px;
 }
+
 
 nav {
     margin: 5px 15px;
@@ -21,6 +28,12 @@ nav {
 .services-hero img {
     height: 600px;
     width: 800px;
+    border-radius: 35px;
+}
+.services-section {
+    justify-content: center;
+    text-align: center;
+
 }
 #booking-btn {
     position:sticky;
