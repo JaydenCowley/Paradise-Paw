@@ -13,93 +13,190 @@
 <body>
 
 
-        <nav>
-            <ul>
-                <li><strong>Paradise Paw</strong></li>
-            </ul>
-            <ul>
-                <li><a href="#services">Our Services</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#contact">Contact us!</a></li>
-                <li><a href="#" id="booking-btn" role="button">Book Now</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <ul>
+            <li><strong>Paradise Paw</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact us!</a></li>
+            <li><a href="#" id="booking-btn" role="button" class="contrast" data-target="modal-example"
+                    onClick="toggleModal(event)">Book Now</a></li>
+
+        </ul>
+    </nav>
+    <!-- modal start -->
+    <dialog id="modal-example">
+        <article>
+            <a href="#close" aria-label="Close" class="close" data-target="modal-example" onClick="toggleModal(event)">
+            </a>
+            <h3>Confirm your action!</h3>
+            <p>
+                All appoiments need to be confirmed by the owner. Appoinments are subject to change based on availability and holiday hours!
+            </p>
+            <p>
+            <form>
+
+                <!-- Grid -->
+                <div class="grid">
+                    <!-- Column 1 -->
+                    <div>
+                        <!-- Markup example 1: input is inside label -->
+                        <label for="firstname">
+                            First name
+                            <input type="text" id="firstname" name="firstname" placeholder="First name" required>
+                        </label>
+
+                        <label for="dogbreed">
+                            Dog's breed
+                        </label>
+                        <details role="list">
+                            <summary aria-haspopup="listbox" role="button">
+                                Dog's breed
+                            </summary>
+                            <ul role="listbox">
+                                <li><a>Action</a></li>
+                                <li><a>Another action</a></li>
+                                <li><a>Something else here</a></li>
+                            </ul>
+                        </details>
+
+                        <!-- Date -->
+                        <label for="date">Date
+                            <input type="date" id="date" name="date">
+                        </label>
+                    </div>
+                    <!-- Column 2 -->
+                    <div>
+                        <label for="lastname">
+                            Last name
+                            <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
+                        </label>
+
+                        <label for="dog's name">
+                            Dog's name
+                            <input type="text" id="dogname" name="dogname" placeholder="Dog's name" required>
+                        </label>
+
+                        <!-- Time -->
+                        <label for="time">Time
+                            <input type="time" id="time" name="time">
+                        </label>
+                    </div>
+                    <!-- Column 3 -->
+                    <div>
+                        <!-- Markup example 2: input is after label -->
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" placeholder="Email address" required>
+
+                        <label for="dog's age">
+                            Dog's age
+                            <input type="number" id="dogage" name="dogage" placeholder="Dog's age" required>
+                        </label>
+                    </div>
+                </div>
+
+
+                <!-- Button -->
+                <button type="submit">Submit</button>
+
+            </form>
+            </p>
+            <footer>
+                <a href="#cancel" role="button" class="secondary" data-target="modal-example"
+                    onClick="toggleModal(event)">
+                    Cancel
+                </a>
+                <a href="#confirm" role="button" data-target="modal-example" onClick="toggleModal(event)">
+                    Confirm
+                </a>
+            </footer>
+        </article>
+    </dialog>
     <main class="container-fluid">
-    <div class="grid">
-        <div>
-            <div class="hero">
-                <img src="./assets/images/logo.jpg" alt="Paradise Paw logo">
-            </div>
-            <!-- reviews start -->
-            <div id="reviews">
-                <h3>Check out our reviews!</h3>
-                <ul>
+        <div class="grid">
+            <!-- Column one -->
+            <div>
+                <div class="hero">
+                    <img src="./assets/images/logo.jpg" alt="Paradise Paw logo">
+                </div>
+                <!-- reviews start -->
+                <div id="reviews">
+                    <h3>Check out our reviews!</h3>
+                    <!-- <ul>
                     <li>5/5 stars</li>
                     <li>10/10 highly recommend</li>
-                </ul>
-            </div>
-        </div>
-        <!-- reviews end -->
-        <!-- Slideshow container -->
-        <div>
-            <div class="dogSlides-container">
-
-                <!-- Dog images for slideshow -->
-                <div class="dogSlide fade">
-                    <!-- <div class="numbertext">1 / 5</div> -->
-                    <img src="./assets/images/husky.jpg" style="width:100%">
-                    <!-- <div class="text">husky</div> -->
-                </div>
-
-                <div class="dogSlide fade">
-                    <!-- <div class="numbertext">2 / 5</div> -->
-                    <img src="./assets/images/cute-under-bite.jpg" style="width:100%">
-                    <!-- <div class="text">cute under bite</div> -->
-                </div>
-
-                <div class="dogSlide fade">
-                    <!-- <div class="numbertext">3 / 5</div> -->
-                    <img src="./assets/images/pomeranian.jpg" style="width:100%">
-                    <!-- <div class="text">pomeranian</div> -->
-                </div>
-                <div class="dogSlide fade">
-                    <!-- <div class="numbertext">4 / 5</div> -->
-                    <img src="./assets/images/poodle.jpg" style="width:100%">
-                    <!-- <div class="text">poodle</div> -->
-                </div>
-                <div class="dogSlide fade">
-                    <!-- <div class="numbertext">5 / 5</div> -->
-                    <img src="./assets/images/schnauzer.jpg" style="width:100%">
-                    <!-- <div class="text">schnauzer</div> -->
+                </ul> -->
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- slideshow end -->
-    <!-- services start -->
-    <div class="services-section">
-        <h2>Our Services</h2>
-        <div class="services-hero container">
-            <h3>Before</h3>
-            <img src="./assets/images/before.jpg" alt="">
-        </div>
-        <div id="services" class="container grid">
+            <!-- reviews end -->
+
+            <!-- Column two -->
+            <!-- Slideshow container -->
             <div>
-                <h3>Bathing</h3>
-                <img src="./assets/images/bath.jpg" alt="">
+                <div class="dogSlides-container">
 
-            </div>
-            <div>
-                <h3>blow drying</h3>
-                <img src="./assets/images/blow-dry.jpg" alt="">
-            </div>
-            <div>
-                <h3>Grooming</h3>
-                <img src="./assets/images/grommed.jpg" alt="">
+                    <!-- Dog images for slideshow -->
+                    <div class="dogSlide fade">
+                        <!-- <div class="numbertext">1 / 5</div> -->
+                        <img src="./assets/images/husky.jpg" style="width:100%">
+                        <!-- <div class="text">husky</div> -->
+                    </div>
+
+                    <div class="dogSlide fade">
+                        <!-- <div class="numbertext">2 / 5</div> -->
+                        <img src="./assets/images/cute-under-bite.jpg" style="width:100%">
+                        <!-- <div class="text">cute under bite</div> -->
+                    </div>
+
+                    <div class="dogSlide fade">
+                        <!-- <div class="numbertext">3 / 5</div> -->
+                        <img src="./assets/images/pomeranian.jpg" style="width:100%">
+                        <!-- <div class="text">pomeranian</div> -->
+                    </div>
+                    <div class="dogSlide fade">
+                        <!-- <div class="numbertext">4 / 5</div> -->
+                        <img src="./assets/images/poodle.jpg" style="width:100%">
+                        <!-- <div class="text">poodle</div> -->
+                    </div>
+                    <div class="dogSlide fade">
+                        <!-- <div class="numbertext">5 / 5</div> -->
+                        <img src="./assets/images/schnauzer.jpg" style="width:100%">
+                        <!-- <div class="text">schnauzer</div> -->
+                    </div>
+                </div>
+
+                <!-- slideshow end -->
+                <!-- services start -->
+
+                <div class="services-section">
+                    <h2>Our Services</h2>
+                    <div class="services-hero container">
+                        <h3>Before</h3>
+                        <img src="./assets/images/before.jpg" alt="">
+                    </div>
+                    <div id="services" class="container grid">
+                        <div>
+                            <h3>Bathing</h3>
+                            <img src="./assets/images/bath.jpg" alt="">
+
+                        </div>
+                        <div>
+                            <h3>blow drying</h3>
+                            <img src="./assets/images/blow-dry.jpg" alt="">
+                        </div>
+                        <div>
+                            <h3>Grooming</h3>
+                            <img src="./assets/images/grommed.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</main>
+
+
+    </main>
     <!-- services end -->
 
 
@@ -113,7 +210,10 @@
             <p>Hours:</p>
 .0        </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
+
 </body>
 
 

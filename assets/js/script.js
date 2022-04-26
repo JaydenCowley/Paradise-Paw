@@ -5,6 +5,31 @@ const closingClass = 'modal-is-closing';
 const animationDuration = 400; // ms
 let visibleModal = null;
 
+// Review API 
+function getApi() {
+  // TODO: Insert the API url to get a list of your repos
+  var requestUrl = 'https://www.fakerestapi.com/datasets/api/v1/amazon-echo-reviews.json';
+
+  fetch(requestUrl)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      console.log(data)
+
+      for (var i = 0; i < 6; i++) {
+        console.log(data.data[i].review_text)
+
+        var reviewList = $("<p class=reviewList>").text('"' + data.data[i].review_text + '"')
+
+        $("#reviews").append(reviewList);
+      }
+    });
+}
+
+getApi();
+// End 
+
 
 // Toggle modal
 const toggleModal = event => {
