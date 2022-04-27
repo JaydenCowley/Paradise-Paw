@@ -131,3 +131,30 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block";
     setTimeout(showSlides, 5000);
 }
+
+//dog api start
+
+var dogList = document.querySelector('ul')
+
+function getDogApi() {
+
+  var requestUrl = 'https://api.thedogapi.com/v1/breeds?api_key=80010725-ca82-4a8b-81af-891babedea06';
+
+  fetch(requestUrl)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    for (var i = 0; i < data.length; i++) {
+      var listItem = document.createElement('li');
+      listItem.textContent = data[i].name;
+      dogList.appendChild(listItem)
+    }
+  });
+
+
+}
+
+
+
+getDogApi();
