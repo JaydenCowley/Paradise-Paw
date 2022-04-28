@@ -135,6 +135,7 @@ function showSlides() {
 //dog api start
 
 var dogList = document.querySelector('ul')
+var dogButton = document.getElementById("apibutton")
 
 function getDogApi() {
 
@@ -147,8 +148,15 @@ function getDogApi() {
   .then(function(data) {
     for (var i = 0; i < data.length; i++) {
       var listItem = document.createElement('li');
-      listItem.textContent = data[i].name;
-      dogList.appendChild(listItem)
+      var linkItem = document.createElement('a');
+      linkItem.setAttribute('id', 'dogId');
+      linkItem.textContent = data[i].name;
+      dogButton.append(listItem);
+      dogButton.appendChild(linkItem);
+      linkItem.addEventListener('click', function() {
+        var dogBreed = document.getElementById('dogId').innerHTML
+        console.log(dogBreed)
+      });
     }
   });
 
