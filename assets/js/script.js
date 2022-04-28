@@ -6,7 +6,7 @@ const animationDuration = 400; // ms
 let visibleModal = null;
 
 // Review API 
-function getApi() {
+function getReviewApi() {
   // TODO: Insert the API url to get a list of your repos
   var requestUrl = 'https://www.fakerestapi.com/datasets/api/v1/amazon-echo-reviews.json';
 
@@ -27,7 +27,7 @@ function getApi() {
     });
 }
 
-getApi();
+getReviewApi();
 // End 
 
 
