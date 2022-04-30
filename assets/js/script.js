@@ -18,7 +18,7 @@ function getReviewApi() {
       console.log(data)
 
       for (var i = 0; i < 6; i++) {
-        console.log(data.data[i].review_text)
+        // console.log(data.data[i].review_text)
 
         var reviewList = $("<p class=reviewList>").text('"' + data.data[i].review_text + '"')
 
@@ -147,15 +147,15 @@ function getDogApi() {
   })
   .then(function(data) {
     for (var i = 0; i < data.length; i++) {
-      var listItem = document.createElement('li');
-      var linkItem = document.createElement('a');
+      var linkItem = document.createElement('option');
+      // var linkItem = document.createElement('a');
       linkItem.setAttribute('id', 'dogId');
       linkItem.textContent = data[i].name;
-      dogButton.append(listItem);
-      dogButton.appendChild(linkItem);
+      dogButton.append(linkItem);
+      // dogButton.appendChild(linkItem);
       linkItem.addEventListener('click', function() {
-        var dogBreed = document.getElementById('dogId').innerHTML
-        console.log(dogBreed)
+        var dogName = this.textContent
+        console.log(dogName)
       });
     }
   });
